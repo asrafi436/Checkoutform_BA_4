@@ -1,0 +1,55 @@
+{
+    "Data Entry/Computer Operator": [
+      "Typing Speed",
+      "Software Proficiency (Word Processors, Spreadsheets)",
+      "Attention to Detail",
+      "Data Management",
+      "Problem-Solving"
+    ],
+    "Software Developer": [
+      "Flutter",
+      "Debugging",
+      "Machine Learning",
+      "Algorithmic Problem Solving",
+      "Database Management",
+      "Software Testing",
+      "Code Quality Assurance",
+      "Web Applications"
+    ],
+    "Mechanic/Technician": [
+      "Mechanical Repair",
+      "Tool Proficiency",
+      "Electrical Systems Knowledge",
+      "Problem Diagnosis",
+      "Preventive Maintenance"
+    ],
+    "Graphics Designer": [
+      "Adobe Creative Suite (Photoshop, Illustrator)",
+      "Design Thinking",
+      "Typography",
+      "UI/UX Design",
+      "Creativity"
+    ],
+    "Mason/Construction Worker": [
+      "Bricklaying",
+      "Concrete Mixing",
+      "Blueprint Interpretation",
+      "Construction Site Safety",
+      "Tool Proficiency"
+    ],
+    "CAD Operator": [
+      "AutoCAD Proficiency",
+      "Technical Drawing",
+      "3D Modeling",
+      "Blueprint Reading",
+      "Design Interpretation"
+    ],
+    "Sales Representative": [
+      "Sales Techniques",
+      "Product Knowledge",
+      "Customer Relations",
+      "Negotiation Skills",
+      "Market Research"
+    ]
+  }
+  

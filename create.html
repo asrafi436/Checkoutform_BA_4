@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cvmaker.com</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+        integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css"
+        integrity="sha512-nMNlpuaDPrqlEls3IX/Q56H36qvBASwb3ipuo3MxeWbsQB1881ox0cRv7UPTgBlriqoynt35KjEwgGUeUXIPnw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+        integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <link rel="stylesheet" href="./css/style.css">
+
+
+
+</head>
+
+<body>
+    <header class="bg-gray-900 text-white shadow-md sticky top-0 z-50">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+            <div class="container">
+                <a class="navbar-brand fs-1 fw-bolder" href="./index.html">CVM</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./create.html">Create Your CV</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="container my-5">
+
+            <h2 class="text-center mb-4">Provide information and make your CV</h2>
+            <form id="cvForm" class="needs-validation" novalidate>
+                <!-- Personal Information -->
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label for="name" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                        <div class="invalid-feedback">Please enter your Full name.</div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                        <div class="invalid-feedback">Please enter a valid email.</div>
+                    </div>
+                </div>
+
+                <div class="row g-3 mt-3">
+                    <div class="col-md-6">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" id="phone" name="phone" required>
+                        <div class="invalid-feedback">Please enter your phone number.</div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="dob" class="form-label">Date of Birth</label>
+                        <input type="date" class="form-control" id="dob" name="dob" required>
+                        <div class="invalid-feedback">Please select your date of birth.</div>
+                    </div>
+                </div>
+
+                <!-- objectives -->
+                 <div class="row g-3 mt-3">
+                    <div class="col-md-12">
+                        <label for="objective" class="form-label"><h5>Objective</h5></label>
+                        <textarea class="form-control" id="objective" name="objective" rows="3" required></textarea>
+                        <div class="invalid-feedback">Please enter your objective.</div>
+                    </div>
+                </div>
+
+                <!-- Address -->
+
+                <div class="row g-3 mt-4">
+                    <!-- Present Address -->
+                    <div class="col-md-6 p-4 rounded-4 " style="background-color: #F8E7F6;">
+                        <h5>Present Address</h5>
+                        <div class="mb-3">
+                            <label for="present-house" class="form-label">House No./Holding No.</label>
+                            <input type="text" class="form-control" id="present-house" name="present-house" required>
+                            <div class="invalid-feedback">Please enter your House No./Holding No.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="present-division" class="form-label">Division</label>
+                            <select id="present-division" name="present-division" class="form-select" required>
+                                <option value="">Select Division</option>
+                            </select>
+                            <div class="invalid-feedback">Please select a division.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="present-district" class="form-label">District</label>
+                            <select id="present-district" name="present-district" class="form-select" required>
+                                <option value="">Select District</option>
+                            </select>
+                            <div class="invalid-feedback">Please select a district.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="present-post-office" class="form-label">Post Office</label>
+                            <input type="text" class="form-control" id="present-post-office" name="present-post-office"
+                                required>
+                            <div class="invalid-feedback">Please enter your Post Office name.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="present-postal-code" class="form-label">Postal Code</label>
+                            <input type="text" class="form-control" id="present-postal-code" name="present-postal-code"
+                                required>
+                            <div class="invalid-feedback">Please enter your Postal Code.</div>
+                        </div>
+                    </div>
+
+                    <!-- Permanent Address -->
+                    <div class="col-md-6 p-4 rounded-4 " style="background-color: #F5F5F5;">
+                        <h5>Permanent Address</h5>
+                        <div class="mb-3">
+                            <label for="permanent-house" class="form-label">House No./Holding No.</label>
+                            <input type="text" class="form-control" id="permanent-house" name="permanent-house"
+                                required>
+                            <div class="invalid-feedback">Please enter your House No./Holding No.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="permanent-division" class="form-label">Division</label>
+                            <select id="permanent-division" name="permanent-division" class="form-select" required>
+                                <option value="">Select Division</option>
+                            </select>
+                            <div class="invalid-feedback">Please select a division.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="permanent-district" class="form-label">District</label>
+                            <select id="permanent-district" name="permanent-district" class="form-select" required>
+                                <option value="">Select District</option>
+                            </select>
+                            <div class="invalid-feedback">Please select a district.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="permanent-post-office" class="form-label">Post Office</label>
+                            <input type="text" class="form-control" id="permanent-post-office"
+                                name="permanent-post-office" required>
+                            <div class="invalid-feedback">Please enter your Post Office name.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="permanent-postal-code" class="form-label">Postal Code</label>
+                            <input type="text" class="form-control" id="permanent-postal-code"
+                                name="permanent-postal-code" required>
+                            <div class="invalid-feedback">Please enter your Postal Code.</div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                
+                <!-- Education -->
+                <div class="container mt-4">
+                    <label class="form-label">
+                        <h5>Education</h5>
+                    </label>
+                    <div id="education-container">
+                        <table class="table table-bordered d-none d-sm-table">
+                            <thead>
+                                <tr>
+                                    <th>Qualification</th>
+                                    <th>Institution Name</th>
+                                    <th>Subject</th>
+                                    <th>CGPA</th>
+                                    <th>Graduation Year</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <select class="form-select" name="qualification[]" required>
+                                            <option value="SSC">SSC</option>
+                                            <option value="HSC">HSC</option>
+                                            <option value="BBA/BSC">BBA/BSC</option>
+                                            <option value="Diploma">Diploma</option>
+                                            <option value="MBA/MSc">MBA/MSc</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control" name="institution[]" placeholder="Institution Name" required>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control" name="subject[]" placeholder="Subject" required>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control" name="cgpa[]" placeholder="CGPA" required>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control" name="graduationYear[]" placeholder="Graduation Year" required>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-link" id="add-education">
+                                            <i class="bi bi-plus-circle"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    
+                        <!-- Vertical display for smaller screens -->
+                        <div class="d-block d-sm-none">
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <div class="mb-2">
+                                        <strong>Qualification:</strong>
+                                        <select class="form-select" name="qualification[]" required>
+                                            <option value="SSC">SSC</option>
+                                            <option value="HSC">HSC</option>
+                                            <option value="BBA/BSC">BBA/BSC</option>
+                                            <option value="Diploma">Diploma</option>
+                                            <option value="MBA/MSc">MBA/MSc</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-2">
+                                        <strong>Institution Name:</strong>
+                                        <input type="text" class="form-control" name="institution[]" placeholder="Institution Name" required>
+                                    </div>
+                                    <div class="mb-2">
+                                        <strong>Subject:</strong>
+                                        <input type="text" class="form-control" name="subject[]" placeholder="Subject" required>
+                                    </div>
+                                    <div class="mb-2">
+                                        <strong>CGPA:</strong>
+                                        <input type="text" class="form-control" name="cgpa[]" placeholder="CGPA" required>
+                                    </div>
+                                    <div class="mb-2">
+                                        <strong>Graduation Year:</strong>
+                                        <input type="text" class="form-control" name="graduationYear[]" placeholder="Graduation Year" required>
+                                    </div>
+                                    <div>
+                                        <button type="button" class="btn btn-link" id="add-education">
+                                            <i class="bi bi-plus-circle"></i> Add
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Qualification</th>
+                                    <th>Institution Name</th>
+                                    <th>Subject</th>
+                                    <th>CGPA</th>
+                                    <th>Graduation Year</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <select class="form-select" name="qualification[]" required>
+                                            <option value="SSC">SSC</option>
+                                            <option value="HSC">HSC</option>
+                                            <option value="BBA/BSC">BBA/BSC</option>
+                                            <option value="Diploma">Diploma</option>
+                                            <option value="MBA/MSc">MBA/MSc</option>
+                                        </select>
+                                    </td>
+                                    <td><input type="text" class="form-control" name="institution[]"
+                                            placeholder="Institution Name" required></td>
+                                    <td><input type="text" class="form-control" name="subject[]" placeholder="Subject"
+                                            required></td>
+                                    <td><input type="text" class="form-control" name="cgpa[]" placeholder="CGPA"
+                                            required></td>
+                                    <td><input type="text" class="form-control" name="graduationYear[]"
+                                            placeholder="Graduation Year" required></td>
+                                    <td>
+                                        <button type="button" class="btn btn-link" id="add-education">
+                                            <i class="bi bi-plus-circle"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table> -->
+                    </div>
+                </div>
+
+
+
+
+                <!-- Work Experience -->
+                <div class="container mt-4">
+                    <label class="form-label">
+                        <h5>Work Experience</h5>
+                    </label>
+                    <div id="experience-container">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Job Title</th>
+                                    <th>Company Name</th>
+                                    <th>Duration</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="text" class="form-control" name="jobTitle[]"
+                                            placeholder="Job Title" required></td>
+                                    <td><input type="text" class="form-control" name="companyName[]"
+                                            placeholder="Company Name" required></td>
+                                    <td><input type="text" class="form-control" name="duration[]" placeholder="Duration"
+                                            required></td>
+                                    <td>
+                                        <button type="button" class="btn btn-link" id="add-experience">
+                                            <i class="bi bi-plus-circle"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+
+
+
+                <div class="row mt-4">
+                    <!-- Skills -->
+                    <div class="col-12 col-lg-6 p-4" style="background-color: #FFFAEC;">
+                        <div class="mb-4">
+                            <label for="job-select" class="form-label"><h5>Skill</h5></label>
+                            <select id="job-select" class="form-select">
+                                <option value="">Select Skill</option>
+                                <option value="Data Entry/Computer Operator">Data Entry/Computer Operator</option>
+                                <option value="Software Developer">Software Developer</option>
+                                <option value="Mechanic/Technician">Mechanic/Technician</option>
+                                <option value="Graphics Designer">Graphics Designer</option>
+                                <option value="Mason/Construction Worker">Mason/Construction Worker</option>
+                                <option value="CAD Operator">CAD Operator</option>
+                                <option value="Sales Representative">Sales Representative</option>
+                            </select>
+                        </div>
+                
+                        <div class="mt-4">
+                            <label for="skills-select" class="form-label">Sub Skills</label>
+                            <select id="skills-select" class="form-select" multiple="multiple">Select Sub Skills</select>
+                        </div>
+                    </div>
+                
+                    <div class="col-12 col-lg-6 p-4"  style="background-color: #F5ECD5;">
+                        <!-- Languages -->
+                        <div>
+                            <label for="languages" class="form-label"><h5>Languages</h5></label>
+                            <select id="languages" name="languages[]" class="form-select" multiple required>
+                                <option value="bangla">Bangla</option>
+                                <option value="english">English</option>
+                                <option value="hindi">Hindi</option>
+                            </select>
+                            <div class="invalid-feedback">Please select at least one language.</div>
+                        </div>
+                
+                        <!-- Image Upload -->
+                        <div class="mt-4">
+                            <label for="image-upload" class="form-label">Upload Image (300x300 size, JPG/JPEG only)</label>
+                            <input type="file" id="image-upload" class="form-control" accept=".jpg,.jpeg" onchange="validateImage()">
+                            <div class="invalid-feedback" id="image-error">Please upload a valid JPG/JPEG Formal image of  size 300x300.</div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="d-flex justify-content-center mt-4">
+                    <button type="submit" class="btn btn-primary" id="generate-pdf">Save Your Info</button>
+                </div>
+
+                
+            </form>
+        </div>
+
+
+    </main>
+
+
+
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <h3 class="m-0">CVM</h3>
+        </div>
+    </footer>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"
+        integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxy/1.6.1/scripts/jquery.ajaxy.min.js"
+        integrity="sha512-bztGAvCE/3+a1Oh0gUro7BHukf6v7zpzrAb3ReWAVrt+bVNNphcl2tDTKCBr5zk7iEDmQ2Bv401fX3jeVXGIcA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"
+        integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+
+
+
+
+    <script src="./js/createCv.js"></script>
+    <script src="./js/division.js"></script>
+    <script src="./js/education.js"></script>
+    <script src="./js/jobXp.js"></script>
+    <script src="./js/jobSkil.js"></script>
+
+</body>
+
+</html>
